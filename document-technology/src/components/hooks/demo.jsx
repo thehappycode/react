@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useContext } from 'react';
+import {ThemeLightContext, ThemeDarkContext} from './theme-context';
 export default function Greeting(props) {
     const name = useFormInput('Mary');
     const surname = useFormInput('Poppins');
     const width = useWindowWidth();
+    const themeLight = useContext(ThemeLightContext);
+    const themeDark = useContext(ThemeDarkContext);
     useDocumentTitle(name.value + ' '+ surname.value);
 
     return (
-        <section>
+        <section style={themeLight}>
             <div>
                 <label>Name</label>
             </div>

@@ -1,6 +1,6 @@
 const System = require('../models/system-model');
 
-createSystem = (req, res) => {
+insertSystem = (req, res) => {
     const body = req.body;
     if(!body){
         return res.status(400).json({
@@ -137,7 +137,7 @@ getSystems = async (req, res) => {
 }
 
 module.exports = {
-    createSystem,
+    insertSystem,
     updateSystem,
     deleteSytem,
     getSystems,

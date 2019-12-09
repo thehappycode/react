@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const System = new Schema(
     {
-        Name: {
+        name: {
             type: String,
             required: true
         },
-        Description: {
+        description: {
             type: String,
             required: false
         }

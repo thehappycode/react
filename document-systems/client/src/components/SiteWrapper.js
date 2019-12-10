@@ -8,8 +8,8 @@ import {
     Button,
     RouterContextProvider
 } from 'tabler-react';
-import type { NotificationProps } from "tabler-react";
+// import type { NotificationProps } from "tabler-react";
 
-type Props = {|
-    +childern: React.Node,
-|}
+// type Props = {|
+//     +childern: React.Node,
+// |}

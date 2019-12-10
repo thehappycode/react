@@ -1,21 +1,17 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import 'tabler-react/dist/Tabler.css';
+import { Card, Button } from 'tabler-react';
 
-import {Card, Button} from 'tabler-react';
-
-class MyCart extends Component{
-    render(){
-        return(
-            <Card>
-                <Card.Header>
-                    <Card.Title>Card Title</Card.Title>
-                </Card.Header>
-                <Card.Body>
-                    <Button color="primary">A Button</Button>
-                </Card.Body>
-            </Card>
-        );
-    }
+const MyCard = () => {
+    return (
+        <Card>
+            <Card.Header>
+                <Card.Title>Card Title</Card.Title>
+            </Card.Header>
+            <Card.Body>
+                <Button color="primary">A Button</Button>
+            </Card.Body>
+        </Card>
+    );
 }
-
-export default MyCart;
+export default MyCard;

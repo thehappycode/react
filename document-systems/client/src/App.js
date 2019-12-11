@@ -1,10 +1,16 @@
 import React from 'react';
-import {Header} from './components/layouts/index';
-
+import 'tabler-react/dist/Tabler.css';
+// import {Header} from './components/layouts/index';
+import {
+    DemoAccountDropdown,
+    DemoSite
+} from './components/get_started'
 function App() {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
+            {/* <DemoAccountDropdown /> */}
+            <DemoSite />
         </>
     );
 }

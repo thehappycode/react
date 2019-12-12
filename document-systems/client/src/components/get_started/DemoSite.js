@@ -1,10 +1,11 @@
 import React from 'react';
+import {NavLink, withRouter} from 'react-router-dom';
 import {
     Site,
     Nav,
     Button,
     Grid,
-    List
+    List,
 } from 'tabler-react';
 import logo from './../../logo.svg';
 
@@ -23,6 +24,32 @@ const accountDropdownProps = {
     ]
 }
 
+const navBarItems = [
+    {
+        value: "Home",
+        to: "/",
+        icon: "home",
+        //LinkComponent: withRouter(NavLink),
+        userExact: true
+    },
+    {
+        value: "Nav",
+        icon: "box",
+        subItems: [
+            {
+                value: "SubNav1",
+                to: "/",
+                icon: "file"
+            },
+            {
+                value: "SubNav2",
+                to: "/",
+                icon: "file"
+            }
+        ]
+    }
+];
+
 const DemoSite = () => {
     return(
         <Site.Wrapper
@@ -31,6 +58,14 @@ const DemoSite = () => {
                 alt: "alt",
                 imageURL: logo,
                 navItems: (
+                    <>
+                    <Nav.Item
+                        type="div"
+                        className="logo-icon-titile"
+                        style={{color: "red"}}
+                    >
+                        ABC
+                    </Nav.Item>
                     <Nav.Item
                         type="div"
                         className="d-none d-md-flex"
@@ -46,9 +81,11 @@ const DemoSite = () => {
                             Source code
                         </Button>
                     </Nav.Item>
+                    </>
                 ),
                 accountDropdown: accountDropdownProps
             }}
+            navProps={{itemsObjects: navBarItems}}
             footerProps={{
                 links: [
                     <a href="#">First Link</a>,
